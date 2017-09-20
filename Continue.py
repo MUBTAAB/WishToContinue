@@ -24,6 +24,8 @@ class generator():
 
     def show(self):
         plt.hist(self.fnkt.rvs(10000),bins = 50)
+        plt.title('Chances for scores')
+        plt.show()
         
 cmean = random.randint(0,100)
 cstdev = random.randint(0,100)
@@ -40,6 +42,8 @@ for i in range(1,cRange+1):
     slist.append(pScore)
     if depth == cRange-1:
         break
+    plt.plot(slist)
+    plt.show()
     while True:
         X = input('Current score: '+str(pScore) + '. You have '+str(cRange-i)+' tries left.'+' Continue (y/n)?')
         if X == 'y':
@@ -97,4 +101,4 @@ else:
     
 print('Depth: '+ str(round(depth/(cRange-1)*100,2))+'%')
 
-
+myrandomgen.show()
