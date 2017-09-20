@@ -95,6 +95,6 @@ elif depth >= cRange-1:
 else:
     print('Irrac index: '+str(round(max(best_dif_before_stop,dif_when_stop)/cmean,2)))
     
-print('Depth: '+ str(depth-1/cRange*100)+'%')
+print('Depth: '+ str(round(depth/(cRange-1)*100,2))+'%')
 
 
